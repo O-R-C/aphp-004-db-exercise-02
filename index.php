@@ -21,3 +21,6 @@ $insertDataToTable($clientsTable, 'clients');
 $insertDataToTable($productsTable, 'products');
 $insertDataToTable($orderTable, 'orders');
 $insertDataToTable($ordersProductsTable, 'orders_products');
+
+
+var_dump($shopsTable->update(1, ['Магазин 11', 'Москва, ул. Тверская, 1']));
