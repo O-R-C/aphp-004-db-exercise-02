@@ -7,7 +7,7 @@ namespace Objects;
 use \Interfaces\DatabaseWrapper;
 use PDO;
 
-class Table implements DatabaseWrapper
+abstract class Table implements DatabaseWrapper
 {
   public object $pdo;
   public string $table;
@@ -21,18 +21,7 @@ class Table implements DatabaseWrapper
     $this->createTable();
   }
 
-  private function createTable(): void
-  {
-    $columns = <<<SQL
-      id INTEGER PRIMARY KEY,
-      name text NOT NULL,
-      email text NOT NULL
-    SQL;
-
-    $sql = 'CREATE TABLE IF NOT EXISTS ' . $this->table . ' (' . $columns . ')';
-
-    $this->pdo->exec($sql);
-  }
+  abstract public function createTable(): void;
 
   public function insert(array $tableColumns, array $values): array
   {
