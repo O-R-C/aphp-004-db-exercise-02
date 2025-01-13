@@ -16,8 +16,8 @@ $orderTable = new \Objects\Order($pdo);
 $ordersProductsTable = new \Objects\Order_Product($pdo);
 
 
-// $insertDataToTable($orderTable, 'orders');
-// $insertDataToTable($ordersProductsTable, 'orders_products');
-// $insertDataToTable($clientsTable, 'clients');
-// $insertDataToTable($productsTable, 'products');
-// $insertDataToTable($shopsTable, 'shops');
+$insertDataToTable($orderTable, 'orders');
+$insertDataToTable($ordersProductsTable, 'orders_products');
+$insertDataToTable($clientsTable, 'clients');
+$insertDataToTable($productsTable, 'products');
+$insertDataToTable($shopsTable, 'shops');
