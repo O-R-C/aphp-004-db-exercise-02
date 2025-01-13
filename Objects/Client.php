@@ -8,7 +8,7 @@ class Client extends Table
 {
   public function __construct(object $pdo)
   {
-    parent::__construct($pdo, 'shop', ['name', 'phone']);
+    parent::__construct($pdo, 'client', ['name', 'phone']);
   }
 
   public function createTable(): void

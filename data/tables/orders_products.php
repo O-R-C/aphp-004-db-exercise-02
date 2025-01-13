@@ -6,30 +6,28 @@ namespace data\tables;
 
 $orders_products = [
   [
-    'id' => 1,
+    'count' => 2,
     'order_id' => 1,
-    'product_id' => 1
+    'product_id' => 1,
   ],
   [
-    'id' => 2,
+    'count' => 3,
     'order_id' => 1,
-    'product_id' => 2
+    'product_id' => 2,
   ],
   [
-    'id' => 3,
+    'count' => 4,
     'order_id' => 2,
-    'product_id' => 3
+    'product_id' => 3,
   ],
   [
-    'id' => 4,
+    'count' => 5,
     'order_id' => 2,
-    'product_id' => 4
+    'product_id' => 4,
   ],
   [
-    'id' => 5,
+    'count' => 6,
     'order_id' => 3,
-    'product_id' => 5
+    'product_id' => 5,
   ]
 ];
-
-return $orders_products;

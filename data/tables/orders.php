@@ -6,28 +6,28 @@ namespace data\tables;
 
 $orders = [
   [
-    'id' => 1,
-    'name' => 'Продукт 1',
-    'price' => 100
+    'created_at' => '2022-01-01',
+    'client_id' => 1,
+    'shop_id' => 1
   ],
   [
-    'id' => 2,
-    'name' => 'Продукт 2',
-    'price' => 200
+    'created_at' => '2022-01-02',
+    'client_id' => 2,
+    'shop_id' => 2
   ],
   [
-    'id' => 3,
-    'name' => 'Продукт 3',
-    'price' => 300
+    'created_at' => '2022-01-03',
+    'client_id' => 3,
+    'shop_id' => 3
   ],
   [
-    'id' => 4,
-    'name' => 'Продукт 4',
-    'price' => 400
+    'created_at' => '2022-01-04',
+    'client_id' => 4,
+    'shop_id' => 4
   ],
   [
-    'id' => 5,
-    'name' => 'Продукт 5',
-    'price' => 500
-  ],
+    'created_at' => '2022-01-05',
+    'client_id' => 5,
+    'shop_id' => 5
+  ]
 ];

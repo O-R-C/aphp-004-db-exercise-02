@@ -15,11 +15,11 @@ class Order_Product extends Table
   {
     $columns = <<<SQL
       id INTEGER PRIMARY KEY,
+      count INTEGER NOT NULL,
       order_id INTEGER NOT NULL,
-      FOREIGN KEY (order_id) REFERENCES order(id),
       product_id INTEGER NOT NULL,
-      FOREIGN KEY (product_id) REFERENCES product(id),
-      count INTEGER NOT NULL
+      FOREIGN KEY (order_id) REFERENCES order_table(id),
+      FOREIGN KEY (product_id) REFERENCES product(id)
     SQL;
 
     $sql = 'CREATE TABLE IF NOT EXISTS ' . $this->table . ' (' . $columns . ')';

@@ -4,32 +4,20 @@ declare(strict_types=1);
 
 require_once './autoload.php';
 
-require_once './data/tables/orders.php';
+require_once './insertDataToTable.php';
 
 
 $pdo = new PDO('sqlite:identifier.sqlite', null, null, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
+$shopsTable = new \Objects\Shop($pdo);
+$clientsTable = new \Objects\Client($pdo);
+$productsTable = new \Objects\Product($pdo);
+$orderTable = new \Objects\Order($pdo);
+$ordersProductsTable = new \Objects\Order_Product($pdo);
 
-// $users = new \Objects\Table($pdo, 'users', ['name', 'email']);
-// $users->resetTable();
 
-
-// $resultInsert = $users->insert(['name', 'email'], ['Petya', '2zP2F@example.com']);
-// var_dump($resultInsert);
-
-// $resultInsert = $users->insert(['name', 'email'], ['Vasya', '2zP2F@example.com']);
-// var_dump($resultInsert);
-
-// $resultUpdate = $users->update(1, ['Petya1', 'aaa@example.com']);
-// var_dump($resultUpdate);
-
-// $resultFind = $users->find(23);
-// var_dump($resultFind);
-
-// $resultDelete = $users->delete(1);
-// var_dump($resultDelete);
-
-// $resultFind = $users->find(1);
-// var_dump($resultFind);
-
-var_dump($orders);
+// $insertDataToTable($orderTable, 'orders');
+// $insertDataToTable($ordersProductsTable, 'orders_products');
+// $insertDataToTable($clientsTable, 'clients');
+// $insertDataToTable($productsTable, 'products');
+// $insertDataToTable($shopsTable, 'shops');

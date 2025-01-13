@@ -8,7 +8,7 @@ class Product extends Table
 {
   public function __construct(object $pdo)
   {
-    parent::__construct($pdo, 'shop', ['name', 'price', 'count', 'shop_id']);
+    parent::__construct($pdo, 'product', ['name', 'price', 'count', 'shop_id']);
   }
 
   public function createTable(): void

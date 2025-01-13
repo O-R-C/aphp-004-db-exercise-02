@@ -18,7 +18,10 @@ abstract class Table implements DatabaseWrapper
     $this->table = $table;
     $this->columns = $columns;
 
-    $this->createTable();
+    var_dump($this->table);
+
+
+    $this->resetTable();
   }
 
   abstract public function createTable(): void;
@@ -63,7 +66,7 @@ abstract class Table implements DatabaseWrapper
 
   public function resetTable(): void
   {
-    $this->pdo->exec("DELETE FROM $this->table");
+    $this->pdo->exec("DROP TABLE IF EXISTS $this->table");
 
     $this->createTable();
   }
