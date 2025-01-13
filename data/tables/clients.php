@@ -26,3 +26,5 @@ $clients = [
     'phone' => '123456789'
   ],
 ];
+
+return $clients;

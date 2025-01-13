@@ -11,7 +11,7 @@ $shops = require_once './data/tables/shops.php';
 $insertData = function (object $table, array $data) {
   $columns = array_keys($data);
   $values = array_values($data);
-  $table->insert($columns, $data);
+  $table->insert($columns, $values);
 };
 
 $insertOrders = function (object $table) use ($insertData, $orders) {

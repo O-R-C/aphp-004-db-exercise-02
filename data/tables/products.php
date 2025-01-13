@@ -36,3 +36,5 @@ $products = [
     'shop_id' => 5
   ],
 ];
+
+return $products;

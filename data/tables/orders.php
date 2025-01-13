@@ -31,3 +31,5 @@ $orders = [
     'shop_id' => 5
   ]
 ];
+
+return $orders;
