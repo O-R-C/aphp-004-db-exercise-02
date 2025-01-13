@@ -18,9 +18,6 @@ abstract class Table implements DatabaseWrapper
     $this->table = $table;
     $this->columns = $columns;
 
-    var_dump($this->table);
-
-
     $this->resetTable();
   }
 

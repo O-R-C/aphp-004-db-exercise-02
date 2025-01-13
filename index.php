@@ -24,3 +24,15 @@ $insertDataToTable($ordersProductsTable, 'orders_products');
 
 
 var_dump($shopsTable->update(1, ['Магазин 11', 'Москва, ул. Тверская, 1']));
+print("\n");
+var_dump($shopsTable->find(2));
+print("\n");
+var_dump($shopsTable->delete(2));
+print("\n");
+var_dump($shopsTable->find(2));
+print("\n");
+
+var_dump($clientsTable->update(1, ['Димон', '777-77-77']));
+print("\n");
+var_dump($clientsTable->find(5));
+print("\n");
